@@ -1,0 +1,78 @@
+[
+    {
+        "code": "home",
+        "name": "หน้าแรก",
+        "bootstrap-icon": "bi-house-fill",
+        "link-to": "/",
+        "dropdown": []
+    },
+    {
+        "code": "suggest-school",
+        "name": "แนะนำโรงเรียน",
+        "bootstrap-icon": "bi-buildings-fill",
+        "link-to": "#",
+        "dropdown": [
+            {
+                "code": "history",
+                "name": "ประวัติโรงเรียน",
+                "link-to": "#"
+            },
+
+            {
+                "code": "info",
+                "name": "ข้อมูลทั่วไป",
+                "link-to": "#"
+            },
+
+            {
+                "code": "manager",
+                "name": "ผู้บริหาร",
+                "link-to": "#"
+            }
+        ]
+    },
+    {
+        "code": "section",
+        "name": "แผนกต่างๆ",
+        "bootstrap-icon": "bi-journal-album",
+        "link-to": "#",
+        "dropdown": [
+            {
+                "code": "kindergarden",
+                "name": "แผนกอนุบาล",
+                "link-to": "#"
+            },
+
+            {
+                "code": "primary",
+                "name": "แผนกประถมศึกษา",
+                "link-to": "#"
+            },
+
+            {
+                "code": "secondary",
+                "name": "แผนกมัธยม",
+                "link-to": "#"
+            },
+            {
+                "code": "nbac",
+                "name": "วิทยาลัยเทคโนโลยีนาคประสิทธิ์บริหารธุรกิจ",
+                "link-to": "#"
+            }
+        ]
+    },
+    {
+        "code": "library",
+        "name": "สืบค้นหนังสือห้องสมุด",
+        "bootstrap-icon": "bi-book",
+        "link-to": "#",
+        "dropdown": []
+    },
+    {
+        "code": "contact",
+        "name": "ติดต่อเรา",
+        "bootstrap-icon": "bi-headset",
+        "link-to": "/contact-us",
+        "dropdown": []
+    }
+]

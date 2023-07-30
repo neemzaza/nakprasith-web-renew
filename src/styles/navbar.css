@@ -1,0 +1,176 @@
+
+/* NAVBAR */
+.navbar {
+  background: rgb(255, 255, 255);
+  padding: 1rem;
+  display: flex;
+  height: 70px;
+  position: relative;
+  transition: 0.5s;
+}
+
+.logo {
+  width: 3rem;
+}
+
+.nav-item {
+  position: relative;
+  z-index: 1;
+  padding-top: .5rem;
+}
+
+.nav-item.active::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 200%;
+  padding: 3rem;
+  padding-bottom: 1rem;
+  background: rgb(227, 242, 255);
+  z-index: -1;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  border-radius: 0 0 1rem 1rem;
+  /* opacity: 1; */
+}
+
+.navbar li.nav-item.active:hover::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 200%;
+  padding: 3rem;
+  padding-bottom: 1rem;
+  background: rgb(227, 242, 255);
+  z-index: -1;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  border-radius: 0 0 1rem 1rem;
+  /* opacity: 1; */
+}
+
+.navbar-brand {
+  position: absolute;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #000;
+}
+
+.navbar ul {
+  display: flex;
+  gap: 2rem;
+  list-style-type: none;
+  position: relative;
+  margin: 0 auto;
+}
+
+.navbar li.nav-item.dropdown {
+  position: relative;
+}
+
+.navbar li.nav-item.dropdown:hover ul.dropdown {
+  opacity: 1;
+  visibility: visible;
+  left: 0px;
+}
+
+.navbar li.nav-item:hover .nav-link {
+  color: rgb(0, 117, 213);
+}
+
+.navbar li.nav-item::before {
+  transition: 0.2s;
+}
+
+.navbar li.nav-item:hover::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  padding-left: 1rem;
+  background: rgb(203, 232, 255);
+  z-index: -1;
+  left: 50%;
+  top: 20px;
+  transform: translate(-50%, -50%);
+  transition: 0.2s;
+  
+}
+
+/* .navbar li.nav-item:hover::before {
+  opacity: 1;
+} */
+
+.navbar ul.dropdown {
+  position: absolute;
+  display: block;
+  padding: 1rem;
+  background: rgb(255, 255, 255);
+  border-radius: 0 1rem 1rem 1rem;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.2s;
+  overflow: hidden;
+  width: 20rem;
+  left: -20px;
+  top: 2.25rem;
+}
+
+.navbar li .dropdown-item {
+  display: block;
+  padding: .5rem;
+  border-radius: .5rem;
+  transition: .2s;
+}
+
+.navbar li .dropdown-item:hover {
+  background: rgb(236, 236, 236);
+}
+
+.nav-toggle {
+    background: rgb(179, 221, 255);
+    padding: .5rem;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 1rem;
+    transition: .2s;
+    cursor: pointer;
+    visibility: visible;
+    opacity: 1;
+}
+
+.nav-toggle:hover {
+    transform: translateY(-50%) scale(1.2);
+}
+.nav-toggle:active {
+    transform: translateY(-50%) scale(1);
+}
+
+.nav-menu {
+  visibility: visible;
+    opacity: 1;
+    transition: .2s;
+    display: contents;
+}
+
+@media screen and (min-width: 1160px) {
+  .nav-toggle {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .nav-menu {
+    visibility: hidden;
+    opacity: 0;
+    display: none !important;
+  }
+}
