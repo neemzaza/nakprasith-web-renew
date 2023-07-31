@@ -1,12 +1,50 @@
-@import url("https://fonts.googleapis.com/css2?family=Krub&display=swap");
+@font-face {
+  font-family: "Krub";
+  src: url("../../public/fonts/Krub/Krub-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Chonburi";
+  src: url("../../public/fonts/Chonburi/Chonburi-Regular.ttf");
+}
+
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --main-highlight-color: #00a4ea;
+  --accent-highlight-color: #ff50f0;
+  --main-light-color: #a0e9ff;
+  --accent-light-color: #ff90f6;
+  --main-bg-color: #bff0ff;
+  --accent-bg-color: #ffc3fa;
+}
 
 body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
   font-family: "Krub", sans-serif;
+}
+
+.container-page {
+  padding: 5rem;
+}
+
+h1 {
+  font-size: 1.5rem;
+  position: relative;
+  width: fit-content;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  width: 40%;
+  height: 5px;
+  background: var(--main-highlight-color);
+  bottom: -10px;
+  left: 0;
 }

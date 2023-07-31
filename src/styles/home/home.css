@@ -1,0 +1,25 @@
+main .activity {
+    background: var(--main-bg-color);
+}
+
+main .news {
+    overflow: hidden;
+    position: relative;
+    padding-top: 5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+/* main .news h1 {
+    text-align: center;
+} */
+
+/* main .news h1::after {
+    left: 50%;
+    transform: translateX(-50%);
+} */ 
+
+main .news .headnp {
+    width: 20rem;
+    margin: 0 auto;
+}

@@ -4,6 +4,15 @@ import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import Link from 'next/link'
 
+import Slide from 'components/Slide'
+
+import Header from 'components/header/Header'
+
+import coverSrc from 'public/img/cover/cover1.jpg'
+import HeadNP from 'public/img/person/headnp.jpg'
+
+import currentEvent from 'components/data/current-event.json'
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -15,9 +24,42 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.main}>
-        
+      <main>
+        <Header title="แต่งกายเรียบร้อย ยิ้มง่าย ไหว้สวย" label="อัตลักษณ์ของโรงเรียนนาคประสิทธิ์ มูลนิธิวัดบางช้างเหนือ" coverSrc={coverSrc.src} />
+
+
+        <div className="grid lg:grid-flow-col auto-cols-fr">
+          <div className="lg:col-span-2 lg:w-auto w-screen news">
+            {/* News */}
+
+            <h1>ผู้บริหาร</h1>
+
+            <br />
+
+              <Image src={HeadNP} sizes='100vw' priority className='headnp' alt='ss' />
+
+
+          </div>
+          <div className="col-span-6">
+            {/*  */}
+            <section className="activity">
+              <div className="container-page">
+                <h1>กิจกรรมต่างๆ</h1>
+                
+                <br />
+
+                <Slide imginfo={currentEvent} />
+
+              </div>
+            </section>
+
+          </div>
+        </div>
+
+        <div className="container-page">ss</div>
+
       </main>
+      
     </>
   )
 }

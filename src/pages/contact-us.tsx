@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 import Link from 'next/link'
+import Header from 'components/header/Header'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,7 +17,7 @@ export default function ContactUs() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <h1 className="bg-slate-950">C</h1>
+      <Header title="ติดต่อเรา" label="อัตลักษณ์ของโรงเรียนนาคประสิทธิ์ มูลนิธิวัดบางช้างเหนือ" coverSrc='https://caltech-prod.s3.amazonaws.com/main/images/vicic-hydrogen2.2e16d0ba.fill-1060x780-c100.jpg' />
       </main>
     </>
   )
