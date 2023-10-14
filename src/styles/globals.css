@@ -27,24 +27,32 @@ body {
   margin: 0;
   overflow-x: hidden;
   font-family: "Krub", sans-serif;
+  scroll-behavior: smooth;
 }
 
 .container-page {
   padding: 5rem;
 }
 
-h1 {
-  font-size: 1.5rem;
-  position: relative;
-  width: fit-content;
+@media screen and (max-width: 800px) {
+  .container-page {
+    padding: 1rem;
+  }
 }
 
-h1::after {
-  content: "";
-  position: absolute;
-  width: 40%;
-  height: 5px;
-  background: var(--main-highlight-color);
-  bottom: -10px;
-  left: 0;
+h1 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  position: relative;
+  width: fit-content;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 40%;
+    height: 5px;
+    background: var(--main-highlight-color);
+    bottom: -10px;
+    left: 0;
+  }
 }

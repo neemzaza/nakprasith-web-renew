@@ -10,24 +10,24 @@
         "code": "suggest-school",
         "name": "แนะนำโรงเรียน",
         "bootstrap-icon": "bi-buildings-fill",
-        "link-to": "#",
+        "link-to": "",
         "dropdown": [
             {
                 "code": "history",
                 "name": "ประวัติโรงเรียน",
-                "link-to": "#"
+                "link-to": "/introducing-to-school/history-of-nakprasith"
             },
 
             {
                 "code": "info",
                 "name": "ข้อมูลทั่วไป",
-                "link-to": "#"
+                "link-to": "/introducing-to-school/info"
             },
 
             {
                 "code": "manager",
                 "name": "ผู้บริหาร",
-                "link-to": "#"
+                "link-to": "/introducing-to-school/manager"
             }
         ]
     },
@@ -35,29 +35,29 @@
         "code": "section",
         "name": "แผนกต่างๆ",
         "bootstrap-icon": "bi-journal-album",
-        "link-to": "#",
+        "link-to": "",
         "dropdown": [
             {
                 "code": "kindergarden",
                 "name": "แผนกอนุบาล",
-                "link-to": "#"
+                "link-to": "https://www.np.ac.th/np/kindergarten/index.php?language=TH"
             },
 
             {
                 "code": "primary",
                 "name": "แผนกประถมศึกษา",
-                "link-to": "#"
+                "link-to": "https://www.np.ac.th/np/primary/index.php?language=TH"
             },
 
             {
                 "code": "secondary",
                 "name": "แผนกมัธยม",
-                "link-to": "#"
+                "link-to": "https://www.np.ac.th/np/secondary/index.php?language=TH"
             },
             {
                 "code": "nbac",
                 "name": "วิทยาลัยเทคโนโลยีนาคประสิทธิ์บริหารธุรกิจ",
-                "link-to": "#"
+                "link-to": "https://www.np.ac.th/nbac/index.php?language=TH"
             }
         ]
     },
@@ -65,8 +65,20 @@
         "code": "library",
         "name": "สืบค้นหนังสือห้องสมุด",
         "bootstrap-icon": "bi-book",
-        "link-to": "#",
-        "dropdown": []
+        "link-to": "",
+        "dropdown": [
+            {
+                "code": "secondary",
+                "name": "ห้องสมุดสุวรรณการ (แผนกสามัญ มัธยมศึกษา)",
+                "link-to": "https://www.np.ac.th/np/library_suwannakarn/opac/index.php"
+            },
+
+            {
+                "code": "nbac",
+                "name": "ศูนย์เสริมปัญญา (ห้องสมุด ปวช.)",
+                "link-to": "https://www.np.ac.th/np/library_vocational/opac/index.php"
+            }
+        ]
     },
     {
         "code": "contact",

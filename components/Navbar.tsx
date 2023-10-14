@@ -5,7 +5,7 @@ import InfoJSON from './data/info.json'
 import { useRouter } from 'next/router'
 import React, { useEffect } from 'react';
 
-import Logo from '../public/img/logo/nakprasith.png'
+import Logo from 'public/img/logo/nakprasith.png'
 import Image from 'next/image';
 
 export default function Navbar() {
@@ -62,10 +62,14 @@ export default function Navbar() {
       upScroll = downScroll;
       
     })
+
+
   }, [])
 
   return (
     <div>
+
+      {/* NAV-PAGE WHEN ON MOBILE DEVICE */}
       <div className='closed nav-page full-page' id="nav-page">
         <a href="#" className='close-btn' onClick={closeNavMenu}><i className="bi bi-x-lg"></i></a>
         <ul className="page-nav-menu">
@@ -95,13 +99,14 @@ export default function Navbar() {
         </ul>
       </div>
 
+      {/* NAVBAR MAIN (BAR) */}
       <nav className="navbar " id="navbar">
         <Link href="#" className='navbar-brand flex flex-row gap-3'><div className='logo'><Image src={Logo} sizes='100vw' priority alt='' /></div><div ><span className='span1' id="name1">Loading...</span><br /><span className='span2' id="name2"></span></div></Link>
 
         <ul className="nav-menu">
 
           {NavigationJSON.map((val, key) => (
-            <li key={key} className={"nav-item " + (val.dropdown.length > 0 ? "dropdown " : "") + (router.pathname === val['link-to'] ? "active " : "")}>
+            <li key={key} className={"nav-item " + (val.dropdown.length > 0 ? "dropdown " : "") + (router.pathname === val['link-to']  ? "active " : "")}>
               <Link href={val['link-to']} className='nav-link'><i className={"bi " + val['bootstrap-icon']}></i> {val.name}</Link>
 
               {(val.dropdown.length > 0) ? (

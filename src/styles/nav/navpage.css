@@ -10,47 +10,50 @@
 }
 
 
-.nav-page.full-page {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    overflow: hidden;
-    z-index: 999;
-    background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(12px);
-    padding-top: 5rem;
-    top: 0;
-    transition: .6s;
-}
+.nav-page {
+    &.full-page {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        overflow: hidden;
+        z-index: 999;
+        background: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(12px);
+        padding-top: 5rem;
+        top: 0;
+        transition: .6s;
 
-.nav-page.full-page .close-btn {
-    position: absolute;
-    z-index: 999;
-    right: 0;
-    font-size: 2rem;
-    top: 0;
-    color: #000000;
-    transition: .2s;
-    margin: 2rem;
-}
+        & .close-btn {
+            position: absolute;
+            z-index: 999;
+            right: 0;
+            font-size: 2rem;
+            top: 0;
+            color: #000000;
+            transition: .2s;
+            margin: 2rem;
 
-.nav-page.full-page .close-btn:hover {
-    color: #ff58ee;
-    cursor: pointer;
-}
+            &:hover {
+                color: #ff58ee;
+                cursor: pointer;
+            }
 
-.nav-page.full-page .close-btn:active {
-    transform: rotate(360deg);
-}
+            &:active {
+                transform: rotate(360deg);
+            }
+        }
 
+        & .page-nav-menu {
+            & a {
+                text-decoration: none;
+                color: #363636;
+            }
 
-.nav-page.full-page .page-nav-menu a {
-    text-decoration: none;
-    color: #363636;
-}
-
-.nav-page.full-page .page-nav-menu li {
-    list-style-type: none;
+            & li {
+                list-style-type: none;
+            }
+        }
+    }
 }
 
 .page-nav-item, .page-dropdown-item {
@@ -62,27 +65,27 @@
     height: 70vh;
     font-size: 1.5rem;
     padding: 2.5rem;
-    text-align: center
-}
+    text-align: center;
 
-.page-nav-menu::before {
-    content: "";
-    position: absolute;
-    background: linear-gradient(180deg, rgba(187, 187, 187, 0.75), transparent);
-    width: 100%;
-    height: 8rem;
-    top:0;
-    left: 0;
-}
+    &::before {
+        content: "";
+        position: absolute;
+        background: linear-gradient(180deg, rgba(187, 187, 187, 0.75), transparent);
+        width: 100%;
+        height: 8rem;
+        top:0;
+        left: 0;
+    }
 
-.page-nav-menu::after {
-    content: "";
-    position: absolute;
-    background: linear-gradient(transparent, rgb(198, 198, 198));
-    width: 100%;
-    height: 10rem;
-    bottom: 0;
-    left: 0;
+    &::after {
+        content: "";
+        position: absolute;
+        background: linear-gradient(transparent, rgb(198, 198, 198));
+        width: 100%;
+        height: 10rem;
+        bottom: 0;
+        left: 0;
+    }
 }
 
 .closed .page-nav-menu::before, 

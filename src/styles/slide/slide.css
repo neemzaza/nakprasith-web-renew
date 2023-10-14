@@ -7,28 +7,33 @@
 }
 
 .carousel {
-    background: #ffffff;
+    background: #000000;
     border-radius: 1rem;
     overflow: hidden;
     position: relative;
-}
+    /* width: 50rem; */
+    height: 40rem;
 
-.carousel .description {
-    background: #f7f7f793;
-    position: absolute;
-    z-index: 1;
-    bottom: 1rem;
-    backdrop-filter: blur(8px);
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 1rem;
-    border-radius: 1rem;
-}
+    & .description {
+        background: #f7f7f793;
+        position: absolute;
+        z-index: 1;
+        bottom: 1rem;
+        backdrop-filter: blur(8px);
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 1rem;
+        border-radius: 1rem;
+        width: 15rem;
+        text-align: center;
+        transition: .2s;
+    }
 
-.carousel img {
-    display: block;
-    object-fit:cover;
-    height: 400px;
+    & img {
+        display: block;
+        object-fit:contain;
+        height: 40rem;
+    }
 }
 
 .carousel-cell-image {
@@ -49,6 +54,6 @@
 
 @media screen and (max-width: 768px) {
     .carousel img {
-        object-fit: cover;
+        /* object-fit: cover; */
     }
 }

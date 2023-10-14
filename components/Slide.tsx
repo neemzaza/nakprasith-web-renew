@@ -7,7 +7,7 @@ interface imginfo {
     alt: string
 }
 
-export default function Slide({ imginfo }: { imginfo: Array<imginfo> }) {
+export default function Slide({ imginfo, wrapAround, autoPlay }: { imginfo: Array<imginfo>, wrapAround: Boolean, autoPlay: Boolean }) {
 
     // useEffect(() => {
     //     var elem: any = document.querySelector(".main-carousel");
@@ -31,12 +31,12 @@ export default function Slide({ imginfo }: { imginfo: Array<imginfo> }) {
             </Head>
             <main>
                 <div className="carousel"
-                    data-flickity='{ "lazyLoad": true, "autoPlay": true, "wrapAround": true, "imagesLoaded": true, "percentPosition": false }'>
+                    data-flickity={'{ "lazyLoad": true, "autoPlay": ' + autoPlay + ', "wrapAround": ' + wrapAround + ', "imagesLoaded": true, "percentPosition": false }'}>
                     {imginfo.map((val, key) => (
                         <span key={key}>
                             <div className="carousel-cell">
                                 <img className="carousel-cell-image"
-                                    data-flickity-lazyload={val.imgsrc} alt={val.alt} />
+                                    src={val.imgsrc} data-flickity-lazyload={val.imgsrc} alt={val.alt} />
                             </div>
 
                             <div className="description">
