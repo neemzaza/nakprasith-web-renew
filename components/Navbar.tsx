@@ -106,7 +106,7 @@ export default function Navbar() {
         <ul className="nav-menu">
 
           {NavigationJSON.map((val, key) => (
-            <li key={key} className={"nav-item " + (val.dropdown.length > 0 ? "dropdown " : "") + (router.pathname === val['link-to']  ? "active " : "")}>
+            <li key={key} className={"nav-item " + (val.dropdown.length > 0 ? "dropdown " : "") + (router.pathname === val['link-to']  ? "active " : "") + (router.pathname.includes(val.code) ? "active" : "")}>
               <Link href={val['link-to']} className='nav-link'><i className={"bi " + val['bootstrap-icon']}></i> {val.name}</Link>
 
               {(val.dropdown.length > 0) ? (

@@ -21,9 +21,9 @@ export default function Footer() {
       <section className="footer-zone bg-pink-300 after:text-pink-400">
         <div className="container-page z-50">
           <div className="child-center grid items-center gap-8 lg:grid-flow-col auto-cols-fr">
-           
+
             <section className="contact">
-            <br />
+              <br />
               <h1><i className="bi bi-geo-alt-fill"></i> ที่อยู่และเส้นทางการเดินทาง</h1>
               <br />
               <div className="eng">
@@ -49,7 +49,17 @@ export default function Footer() {
               <h2 className="text-2xl"><i className="bi bi-telephone-fill"></i> เบอร์โทรติดต่อ</h2>
               <div className="phone text-xl pl-10">
                 <br />
-                <p>034 311 263</p>
+                <ul className="list-disc">
+                  <li><p>0-3431-1263-4</p>
+                  </li>
+                  <li>
+                    <p>0-3432-5663</p>
+                  </li>
+                  <br/>
+                  <li>
+                    <p>Fax: 0-3422-2392</p>
+                  </li>
+                </ul>
               </div>
 
               <br />
@@ -72,8 +82,8 @@ export default function Footer() {
       </section>
       <section className="navigation bg-sky-500 text-white after:text-sky-600">
         <div className="p-5 pl-20">
-        <Link href={"/"}><b className="underline">Home</b></Link> 
-        {router.asPath.split("/").map((val, key) => (
+          <Link href={"/"}><b className="underline">Home</b></Link>
+          {router.asPath.split("/").map((val, key) => (
             <Link href={val} key={key}> / <b>{val}</b></Link>
           ))}
         </div>
@@ -81,9 +91,9 @@ export default function Footer() {
       <section className="info-copyright bg-sky-300 after:text-sky-200">
         <div className="p-3">
           <div className="flex grid-col-3 justify-between">
-            
+
             <a className="left-text flex gap-5"><div className="grayscale max-w-[1.5rem] w-full"><Image src={Logo} priority alt='' /></div> © {new Date().getFullYear()} Nakprasith School</a>
-            <p className="right-text text-end">Created for Nakprasith School by <Link className="underline" href={"https://it-airwavy.netlify.app/"}>Sarut Ardnarong Np.78</Link></p>
+            <p className="right-text mr-3 text-end">Created by Nakprasith School {/*<Link className="underline" href={"https://it-airwavy.netlify.app/"}>by Sarut Ardnarong Np.78</Link> */}</p>
           </div>
         </div>
       </section>

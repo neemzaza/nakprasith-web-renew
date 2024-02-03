@@ -1,8 +1,9 @@
 .header-first {
     width: 100vw;
-    height: 40rem;
+    height: 35rem;
     background-size: cover;
     position: relative;
+    background-position: center;
 }
 
 .header-first::before {

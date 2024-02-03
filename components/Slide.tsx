@@ -24,6 +24,10 @@ export default function Slide({ imginfo, wrapAround, autoPlay }: { imginfo: Arra
     //     });
     // }, [])
 
+    useEffect(() => {
+        
+    }, [])
+
     return (
         <>
             <Head>
@@ -40,7 +44,9 @@ export default function Slide({ imginfo, wrapAround, autoPlay }: { imginfo: Arra
                             </div>
 
                             <div className="description">
-                                <p>{val.alt}</p>
+                                <p>{val.alt.split('{br}').map((val, key) => (
+                                    <p key={key}>{val}</p>
+                                ))}</p>
                             </div>
                         </span>
                     ))}

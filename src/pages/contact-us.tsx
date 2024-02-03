@@ -28,15 +28,15 @@ export default function ContactUs() {
             <h2 className="text-2xl"><i className="bi bi-flag"></i> Facebook Page</h2>
             <br />
             <div className="facebook-page-nav text-xl underline pl-10">
-              <Link href="https://www.facebook.com/AnubalNP"><i className="bi bi-facebook"></i> เพจ Facebook โรงเรียนนาคประสิทธิ์ แผนกอนุบาล</Link>
+              <Link href="https://www.facebook.com/AnubalNP"><i className="bi bi-facebook"></i> แผนกอนุบาล</Link>
 
               <br /><br />
 
-              <Link href="https://www.facebook.com/profile.php?id=100057684098918"><i className="bi bi-facebook"></i> เพจ Facebook โรงเรียนนาคประสิทธิ์ แผนกประถมศึกษา</Link>
+              <Link href="https://www.facebook.com/profile.php?id=100057684098918"><i className="bi bi-facebook"></i> แผนกประถมศึกษา</Link>
 
               <br /><br />
 
-              <Link href="https://www.facebook.com/NP.Secondary"><i className="bi bi-facebook"></i> เพจ Facebook โรงเรียนนาคประสิทธิ์ แผนกมัธยมศึกษา</Link>
+              <Link href="https://www.facebook.com/NP.Secondary"><i className="bi bi-facebook"></i> แผนกมัธยมศึกษา</Link>
 
 
             </div>
@@ -46,7 +46,7 @@ export default function ContactUs() {
             <h2 className="text-2xl"><i className="bi bi-envelope"></i> Email</h2>
             <div className="email text-xl underline pl-10">
               <br />
-              <a href="mailto:nakprasith.np@gmail.com">nakprasith.np@gmail.com</a>
+              <a href="mailto:nakprasith@yahoo.com">nakprasith@yahoo.com</a>
               <br /><br />
               <a href="mailto:npkindergarten@gmail.com">npkindergarten@gmail.com (แผนกอนุบาล)</a>
             </div>

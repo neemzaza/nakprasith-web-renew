@@ -105,6 +105,27 @@
     margin-bottom: 2rem;
 }
 
+.nav-page .dropdown-link {
+    position: relative;
+    text-decoration: underline !important;
+    /* width: 100%;
+    z-index: 1;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: inherit;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        height: 150%;
+        background: rgba(0, 0, 0, 0.098);
+        backdrop-filter: blur(7px);
+        border-radius: 1.5rem;
+        z-index: -1;
+    } */
+}
+
 .page-nav-item:active {
     transform: scale(0.9);
 }

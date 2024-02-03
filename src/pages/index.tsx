@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>เว็บไซต์นาคประสิทธิ์ | Nakprasith Website</title>
+        <title>โรงเรียนนาคประสิทธิ์ | Nakprasith School</title>
         <meta name="description" content="97/1 ม.3 ต. คลองใหม่ อ.สามพราน จ.นครปฐม 73110" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href={Logo.src} />

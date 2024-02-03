@@ -7,7 +7,7 @@
         "dropdown": []
     },
     {
-        "code": "suggest-school",
+        "code": "introducing-to-school",
         "name": "แนะนำโรงเรียน",
         "bootstrap-icon": "bi-buildings-fill",
         "link-to": "",
@@ -51,7 +51,7 @@
 
             {
                 "code": "secondary",
-                "name": "แผนกมัธยม",
+                "name": "แผนกมัธยมศึกษา",
                 "link-to": "https://www.np.ac.th/np/secondary/index.php?language=TH"
             },
             {
@@ -82,7 +82,7 @@
     },
     {
         "code": "contact",
-        "name": "ติดต่อเรา",
+        "name": "ติดต่อโรงเรียน",
         "bootstrap-icon": "bi-headset",
         "link-to": "/contact-us",
         "dropdown": []
