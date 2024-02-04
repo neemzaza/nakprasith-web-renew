@@ -41,13 +41,13 @@ export default function Intro() {
   return (
     <>
       <Head>
-        <title>ประวัติฯ โรงเรียนนาคประสิทธิ์</title>
+        <title>ประวัติโรงเรียน</title>
         <meta name="description" content="เริ่มเปิดการเรียนการสอนตั้งแต่ พ.ศ.2484 - ปัจจุบัน" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href={Logo.src} />
       </Head>
       <main>
-        <Header title="ประวัติฯ โรงเรียนนาคประสิทธิ์" label="เริ่มเปิดการเรียนการสอนตั้งแต่ พ.ศ.2484 - ปัจจุบัน" coverSrc={coverSrc.src} />
+        <Header title="ประวัติโรงเรียน" label="เริ่มเปิดการเรียนการสอนตั้งแต่ พ.ศ.2484 - ปัจจุบัน" coverSrc={coverSrc.src} />
 
 
     

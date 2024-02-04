@@ -46,12 +46,12 @@ export default function Manager() {
   return (
     <>
       <Head>
-        <title>ผู้บริหาร โรงเรียนนาคประสิทธิ์</title>
+        <title>ผู้บริหารโรงเรียน</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href={Logo.src} />
       </Head>
       <main>
-        <Header title="ผู้บริหาร โรงเรียนนาคประสิทธิ์" label="" coverSrc={coverSrc.src} />
+        <Header title="ผู้บริหารโรงเรียน" label="" coverSrc={coverSrc.src} />
 
 
     

@@ -1,6 +1,9 @@
 import Head from 'next/head'
+import Image from 'next/image'
 import Script from 'next/script'
 import React, { useEffect } from 'react'
+
+import errorImg from 'public/img/cover/cover1.jpg';
 
 interface imginfo {
     imgsrc: string,
@@ -24,9 +27,9 @@ export default function Slide({ imginfo, wrapAround, autoPlay }: { imginfo: Arra
     //     });
     // }, [])
 
-    useEffect(() => {
+    // useEffect(() => {
         
-    }, [])
+    // }, [])
 
     return (
         <>
@@ -35,18 +38,19 @@ export default function Slide({ imginfo, wrapAround, autoPlay }: { imginfo: Arra
             </Head>
             <main>
                 <div className="carousel"
-                    data-flickity={'{ "lazyLoad": true, "autoPlay": ' + autoPlay + ', "wrapAround": ' + wrapAround + ', "imagesLoaded": true, "percentPosition": false }'}>
+                    data-flickity={'{ "lazyLoad": true, "autoPlay": ' + autoPlay + ', "wrapAround": ' + wrapAround + ', "imagesLoaded": true, "percentPosition": true }'}>
                     {imginfo.map((val, key) => (
                         <span key={key}>
                             <div className="carousel-cell">
+                                 {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img className="carousel-cell-image"
                                     src={val.imgsrc} data-flickity-lazyload={val.imgsrc} alt={val.alt} />
                             </div>
 
                             <div className="description">
-                                <p>{val.alt.split('{br}').map((val, key) => (
-                                    <p key={key}>{val}</p>
-                                ))}</p>
+                                <span>{val.alt.split('{br}').map((thisval, thiskey) => (
+                                    <p key={thiskey}>{thisval}</p>
+                                ))}</span>
                             </div>
                         </span>
                     ))}
