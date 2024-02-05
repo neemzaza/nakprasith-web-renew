@@ -10,6 +10,7 @@ footer {
         &::after {
             content: "LOCATION";
             font-family: "Chonburi";
+            opacity: .5;
             position: absolute;
             font-weight: bolder;
             bottom: -4rem;
@@ -27,6 +28,7 @@ footer {
         &::after {
             content: "NAVIGATION";
             font-family: "Chonburi";
+            opacity: .5;
             position: absolute;
             font-weight: bolder;
             bottom: -4rem;
@@ -43,6 +45,7 @@ footer {
 
         &::after {
             content: "COPYRIGHT";
+            opacity: .5;
             font-family: "Chonburi";
             position: absolute;
             font-weight: bolder;

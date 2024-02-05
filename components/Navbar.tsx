@@ -114,7 +114,7 @@ export default function Navbar() {
                   <p className='menu-main-name'><i className={"bi " + val['bootstrap-icon']}></i> {val.name}</p>
                   {
                     val.dropdown.map((valin, keyin) => (
-                      <li key={keyin} className='dropdown-item'>
+                      <li key={keyin} className={'dropdown-item '+ (router.pathname === valin['link-to']  ? "active " : "")}>
                         <Link href={valin['link-to']} className='dropdown-link'>{valin.name}</Link>
                       </li>
                     ))
