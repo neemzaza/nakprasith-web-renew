@@ -23,8 +23,8 @@ export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
   useEffect(() => {
-    router.events.on("routeChangeComplete", () => {
-      router.reload();
+    router.events.on("routeChangeStart", () => {
+      router.reload()
     })
   }, [router])
 
