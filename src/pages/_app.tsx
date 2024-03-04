@@ -24,7 +24,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   useEffect(() => {
     router.events.on("routeChangeComplete", () => {
-      window.location.reload();
+      router.reload();
     })
   }, [router])
 
