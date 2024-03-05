@@ -1,59 +1,50 @@
-/* FLICKY USE */
-
-/* external css: flickity.css */
-
-* {
-    box-sizing: border-box;
-}
-
-.carousel {
-    background: #000000;
+.carousel-inner {
+    background: #ffffff;
+    animation: skeleLoading 2s infinite;
     border-radius: 1rem;
-    overflow: hidden;
-    position: relative;
-    /* width: 50rem; */
     height: 40rem;
 
-    & .description {
-        background: #f7f7f793;
-        position: absolute;
-        z-index: 1;
-        bottom: 1rem;
-        backdrop-filter: blur(8px);
-        left: 50%;
-        transform: translateX(-50%);
-        padding: 1rem;
-        border-radius: 1rem;
-        width: 20rem;
-        text-align: center;
-        transition: .2s;
+    & span {
+        height: 100%;
     }
 
     & img {
-        display: block;
-        object-fit:contain;
+        object-fit: cover;
+        /* width: 100%; */
         height: 40rem;
+        position: relative;
+        margin: 0 auto;
+        z-index: 1;
+
+        &.carousel-bg-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            filter: blur(10px);
+            z-index: 0;
+            width: 100%;
+        }
+    }
+
+    & .carousel-caption {
+        z-index: 10;
+        background: #0000004f;
+        backdrop-filter: blur(8px);
+        width: fit-content;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+        border-radius: 1.25rem;
+        font-size: 1.125rem;
     }
 }
 
-.carousel-cell-image {
-    display: block;
-    max-height: 100%;
-    margin: 0 auto;
-    max-width: 100%;
-    opacity: 0;
-    -webkit-transition: opacity 0.4s;
-            transition: opacity 0.4s;
-  }
-  
-  /* fade in lazy loaded image */
-  .carousel-cell-image.flickity-lazyloaded,
-  .carousel-cell-image.flickity-lazyerror {
-    opacity: 1;
-  }
-
-@media screen and (max-width: 768px) {
-    .carousel img {
-        /* object-fit: cover; */
+@keyframes skeleLoading {
+    0% {
+        background: #ffffff;
+    } 50% {
+        background: #e4e4e4;
+    } 100% {
+        background: #ffffff;
     }
 }

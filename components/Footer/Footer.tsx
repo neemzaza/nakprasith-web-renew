@@ -71,7 +71,7 @@ export default function Footer() {
 
             </section>
             <section className="map">
-              <div className="card bg-white p-5 pb-0 max-w-[40rem] w-full rounded-3xl shadow-xl">
+              <div className="card bg-white p-3 pb-0 max-w-[40rem] w-full rounded-3xl shadow-xl">
 
                 <iframe className="rounded-2xl w-full h-80" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.9184489746694!2d100.20247937576347!3d13.72338699794936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e2ea67c61c2205%3A0x156e13e486cf65e!2z4LmC4Lij4LiH4LmA4Lij4Li14Lii4LiZ4LiZ4Liy4LiE4Lib4Lij4Liw4Liq4Li04LiX4LiY4Li04LmM!5e0!3m2!1sth!2sth!4v1697200142738!5m2!1sth!2sth" allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                 <p className="text-center text-sm p-2 text-gray-500"><i className="bi bi-map-fill"></i> แผนที่การเดินทาง</p>

@@ -110,6 +110,19 @@
   }
 
   & li {
+
+    
+
+      & .nav-link:hover  {
+        transition: .2s;
+        color: var(--main-highlight-color);
+      }
+
+      & .nav-link:active  {
+        transition: .2s;
+        color: var(--accent-highlight-color);
+      }
+
     &.nav-item {
 
       &.dropdown {
@@ -123,13 +136,7 @@
         }
       }
 
-      &:hover .nav-link {
-        color: var(--main-highlight-color);
-      }
-
-      &:active .nav-link {
-        color: var(--accent-highlight-color);
-      }
+      
 
       &::before {
         transition: 0.2s;
@@ -189,13 +196,18 @@
           width: 100%;
           height: 100%;
           background: var(--accent-highlight-color);
-          z-index: -1;
+          z-index: -2;
           top: 0;
           left: 0;
           border-radius: .45rem;
           opacity: .5;
           backdrop-filter: blur(2px);
           box-shadow: 0 2px 18px var(--accent-highlight-color);
+        }
+
+        &:hover::before {
+          background: var(--accent-highlight-color);
+          z-index: 0;
         }
       }
 

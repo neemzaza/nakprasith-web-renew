@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import Script from 'next/script'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
+
+import { Carousel } from 'react-bootstrap';
 
 import errorImg from 'public/img/cover/cover1.jpg';
 
@@ -31,37 +33,51 @@ export default function Slide({ imginfo, wrapAround, autoPlay }: { imginfo: Arra
         
     // }, [])
 
+    const [index, setIndex] = useState(0);
+
+    const handleSelect = (selectedIndex: any, e:any) => {
+        setIndex(selectedIndex);
+    }
+
     return (
         <>
-            <Head>
+            {/* <Head>
                 <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
+            </Head> */}
+            <Head>
+                        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossOrigin="anonymous"
+            />
             </Head>
             <main>
-                <div className="carousel"
-                    data-flickity={'{ "lazyLoad": true, "autoPlay": ' + autoPlay + ', "wrapAround": ' + wrapAround + ', "imagesLoaded": true, "percentPosition": true }'}>
-                    {imginfo.map((val, key) => (
-                        <span key={key}>
-                            <div className="carousel-cell">
+                <Carousel activeIndex={index} onSelect={handleSelect}>
+
+                {imginfo.map((val, key) => (
+                        <Carousel.Item key={key}>
+                            {/* < className="carousel-cell"> */}
                                  {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img className="carousel-cell-image"
                                     src={val.imgsrc} data-flickity-lazyload={val.imgsrc} alt={val.alt} />
-                            </div>
+                            {/* </> */}
+                            <img className="carousel-bg-image"
+                                    src={val.imgsrc} data-flickity-lazyload={val.imgsrc} alt={val.alt} />
 
-                            <div className="description">
+                            <Carousel.Caption className="description">
                                 <span>{val.alt.split('{br}').map((thisval, thiskey) => (
                                     <p key={thiskey}>{thisval}</p>
                                 ))}</span>
-                            </div>
-                        </span>
+                            </Carousel.Caption>
+                        </Carousel.Item>
                     ))}
 
 
-
-                </div>
-
+                </Carousel>
 
             </main>
-            <Script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></Script>
+            <Script  src="https://cdn.jsdelivr.net/npm/react-bootstrap@next/dist/react-bootstrap.min.js"></Script>
         </>
     )
 }

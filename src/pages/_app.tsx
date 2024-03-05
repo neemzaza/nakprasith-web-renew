@@ -1,5 +1,7 @@
 // import '../../dist/output.css'
 
+'use client'
+
 import '@/styles/globals.css'
 import '@/styles/nav/navbar.css'
 import '@/styles/nav/navpage.css'
@@ -23,8 +25,8 @@ export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
 
   useEffect(() => {
-    router.events.on("routeChangeStart", () => {
-      router.reload()
+    router.events.on("routeChangeComplete", () => {
+      // router.reload()
     })
   }, [router])
 
