@@ -9,6 +9,7 @@ import '@/styles/home/home.css'
 import '@/styles/header/header.css'
 import '@/styles/slide/slide.css'
 import '@/styles/footer/footer.css'
+import "@/styles/carousel.css"
 
 import type { AppProps } from 'next/app'
 
