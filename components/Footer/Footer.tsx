@@ -82,7 +82,7 @@ export default function Footer() {
       </section>
       <section className="navigation bg-sky-500 text-white after:text-sky-600">
         <div className="p-5 pl-20">
-          <Link href={"/"}><b className="underline">Home</b></Link>
+          <Link href={"/"}><b className="underline">NP Website</b></Link>&nbsp;
           {router.asPath.split("/").map((val, key) => (
             <Link href={val} key={key}> / <b>{val}</b></Link>
           ))}

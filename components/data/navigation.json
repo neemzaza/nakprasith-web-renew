@@ -3,7 +3,7 @@
         "code": "home",
         "name": "หน้าแรก",
         "bootstrap-icon": "bi-house-fill",
-        "link-to": "/",
+        "link-to": "/home",
         "dropdown": []
     },
     {

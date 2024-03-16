@@ -2,6 +2,7 @@
 
 'use client'
 
+import "@/styles/enter-the-website.css"
 import '@/styles/globals.css'
 import '@/styles/nav/navbar.css'
 import '@/styles/nav/navpage.css'

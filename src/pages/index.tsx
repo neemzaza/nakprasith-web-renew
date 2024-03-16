@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
-import styles from '@/styles/Home.module.css'
+
 import Link from 'next/link'
 
 import Slide from 'components/Slide'
@@ -14,53 +14,58 @@ import HeadNP from 'public/img/person/headnp.jpg'
 import currentEvent from 'components/data/current-event.json'
 
 import Logo from 'public/img/logo/nakprasith.png'
+import { useEffect } from 'react'
+
+import InfoJSON from '../../components/data/info.json'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  return (
-    <>
-      <Head>
-        <title>โรงเรียนนาคประสิทธิ์ | Nakprasith School</title>
-        <meta name="description" content="97/1 ม.3 ต. คลองใหม่ อ.สามพราน จ.นครปฐม 73110" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href={Logo.src} />
-      </Head>
-      <main>
-        <Header title="แต่งกายเรียบร้อย ยิ้มง่าย ไหว้สวย" label="อัตลักษณ์ของโรงเรียนนาคประสิทธิ์ มูลนิธิวัดบางช้างเหนือ" coverSrc={coverSrc.src} />
+    useEffect(() => {
+
+        let name1 = document.getElementById("nameI");
+        let name2 = document.getElementById("nameII");
+
+        let upperText1 = InfoJSON['school-eng-name-1'].toUpperCase();
+        //@ts-ignore
+        name1.innerText = upperText1;
+
+        let upperText2 = InfoJSON['school-eng-name-2'].toUpperCase();
+        //@ts-ignore
+        name2.innerText = upperText2;
 
 
-        <div className="grid lg:grid-flow-col auto-cols-fr">
-          <div className="lg:col-span-2 lg:w-auto w-screen news">
-            {/* News */}
 
-            <h1>ผู้บริหาร</h1>
+    }, [])
+    return (
+        <>
+            <Head>
+                <title>โรงเรียนนาคประสิทธิ์ | Nakprasith School</title>
+                <meta name="description" content="97/1 ม.3 ต. คลองใหม่ อ.สามพราน จ.นครปฐม 73110" />
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <link rel="icon" href={Logo.src} />
+            </Head>
+            <main className='enter-the-website'>
+                <nav className="navbar " id="navbar">
+                    <Link href="#" className='navbar-brand flex flex-row gap-3'><div className='logo'><Image src={Logo} sizes='100vw' priority alt='' /></div><div ><span className='span1' id="nameI">Loading...</span><br /><span className='span2' id="nameII"></span></div></Link>
+                </nav>
 
-            <br />
+                <div className='relative top-[50%] translate-y-[-50%] text-center backdrop-blur-md m-0 m-auto p-[2rem]'>
+                    <span className=''><h2 className='xl:text-6xl text-4xl'>โรงเรียนนาคประสิทธิ์</h2>
+                    <br/>
+                        <h2 className='xl:text-4xl text-2xl'>มูลนิธิวัดบางช้างเหนือ</h2>
+                        <br/>
+                        <p>นี่คือเว็บไซด์ของโรงเรียนนาคประสิทธิ์ มูลนิธิวัดบางช้างเหนือ คุณสามารถกดปุ่ม "เข้าสู่เว็บไซด์โรงเรียน" เพื่อที่จะไปยังหน้าหลักของเซ็บไซด์เรา</p>
+                    </span>
+                    <br /><br />
+                    <Link href="/home" className='bg-blue-500 p-3 rounded-xl text-white transition hover:bg-pink-500'>เข้าสู่เว็บไซด์โรงเรียน</Link>
+                </div>
 
-              <Image src={HeadNP} sizes='100vw' priority className='headnp' alt='ss' />
+                <div className='absolute bottom-0 text-black left-[50%] translate-x-[-50%] mb-10'> © 2024 Nakprasith School</div>
+            </main>
+            
+            
 
-
-          </div>
-          <div className="col-span-6">
-            {/*  */}
-            <section className="activity">
-              <div className="container-page">
-                <h1>กิจกรรมต่างๆ</h1>
-                
-                <br />
-
-                <Slide imginfo={currentEvent} wrapAround={true} autoPlay={true} />
-
-              </div>
-            </section>
-
-          </div>
-        </div>
-
-
-      </main>
-      
-    </>
-  )
+        </>
+    )
 }
