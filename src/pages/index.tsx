@@ -17,6 +17,7 @@ import Logo from 'public/img/logo/nakprasith.png'
 import { useEffect } from 'react'
 
 import InfoJSON from '../../public/data/info.json'
+import Script from 'next/script'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -45,8 +46,9 @@ export default function Home() {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <link rel="icon" href={Logo.src} />
             </Head>
+            
             <main className='enter-the-website'>
-                <nav className="navbar " id="navbar">
+                <nav className="navbar" id="navbar">
                     <Link href="#" className='navbar-brand flex flex-row gap-3'><div className='logo'><Image src={Logo} sizes='100vw' priority alt='' /></div><div ><span className='span1' id="nameI">Loading...</span><br /><span className='span2' id="nameII"></span></div></Link>
                 </nav>
 
@@ -55,7 +57,7 @@ export default function Home() {
                     <br/>
                         <h2 className='xl:text-4xl text-2xl'>มูลนิธิวัดบางช้างเหนือ</h2>
                         <br/>
-                        <p>นี่คือเว็บไซด์ของโรงเรียนนาคประสิทธิ์ มูลนิธิวัดบางช้างเหนือ คุณสามารถกดปุ่ม &lsquo;เข้าสู่เว็บไซด์โรงเรียน&lsquo; เพื่อที่จะไปยังหน้าหลักของเซ็บไซด์เรา</p>
+                        <p className=''>NAKPRASITH SCHOOL WAT BANGCHANGNUA FOUNDATION</p>
                     </span>
                     <br /><br />
                     <Link href="/home" className='bg-blue-500 p-3 rounded-xl text-white transition hover:bg-pink-500'>เข้าสู่เว็บไซด์โรงเรียน</Link>

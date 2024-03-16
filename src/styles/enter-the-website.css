@@ -1,7 +1,11 @@
 .enter-the-website {
-    background: #fff;
+    background: url("../../public/img/cover/cover1.jpg");
     width: 100vw;
     height: 100vh;
     position: fixed;
     z-index: 55555;
+
+    & .navbar {
+        background: transparent;
+    }
 }

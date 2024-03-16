@@ -92,8 +92,8 @@ export default function Footer() {
         <div className="p-3">
           <div className="flex grid-col-3 justify-between">
 
-            <a className="left-text flex gap-5"><div className="grayscale max-w-[1.5rem] w-full"><Image src={Logo} priority alt='' /></div> © {new Date().getFullYear()} Nakprasith School</a>
-            <p className="right-text mr-3 text-end">Created by Nakprasith School {/*<Link className="underline" href={"https://it-airwavy.netlify.app/"}>by Sarut Ardnarong Np.78</Link> */}</p>
+            <a className="left-text flex gap-5"><div className=" max-w-[1.5rem] w-full"><Image src={Logo} priority alt='' /></div> © {new Date().getFullYear()} Nakprasith School</a>
+
           </div>
         </div>
       </section>

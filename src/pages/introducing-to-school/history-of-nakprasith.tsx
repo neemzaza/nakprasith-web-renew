@@ -114,17 +114,17 @@ export default function Intro() {
                 <div className='grid sm:grid-cols-1 lg:grid-cols-2 gap-4'>
                 <div className=''>
                 <p className='text-lg'>
-                  <span className='paragraph text-xl'>
+                  <span className='paragraph '>
                     <span>เหตุผลที่ใช้ชื่อนาคประสิทธิ์เพราะในระหว่างการก่อสร้างอาคารเรียนหลังแรก <br/>
-                    &lsquo;พระครูปลัดผันติตสุวรรณโณ (แสงโสภา)&lsquo;<br/></span>
-                  </span>
+                    &lsquo;พระครูปลัดผันติตสุวรรณโณ (แสงโสภา)&lsquo;</span>
+                  </span>&nbsp;
                   เจ้าอาวาสวัดบางช้างเหนือองค์แรก
                   ได้นิมิตเห็นพญานาคเลื้อยพันต้นเสาเอกของอาคารเรียนท่านจึงให้ชื่อโรงเรียนว่า
                   &lsquo;โรงเรียนนาคประสิทธิ์&lsquo;<br /><br />
 
                   <span>
                     
-                  <span className='paragraph text-xl'>ปี พ.ศ.2484 - ปี พ.ศ.2543 ภายหลังจากพระครูปลัดผันติตสุวรรณโณมรณภาพพระพิศาลศึกษากร เจ้าอาวาสวัดบางช้างเหนือองค์ต่อมาได้เป็นผู้อุปถัมภ์</span> โดยได้ย้ายโรงเรียนมาก่อสร้างใหม่ในพื้นที่ด้านทิศตะวันตกของวัดบางช้างเหนือเนื่องจากจำนวนนักเรียน
+                  <span className='paragraph'>ปี พ.ศ.2484 - ปี พ.ศ.2543 ภายหลังจากพระครูปลัดผันติตสุวรรณโณมรณภาพพระพิศาลศึกษากร เจ้าอาวาสวัดบางช้างเหนือองค์ต่อมาได้เป็นผู้อุปถัมภ์</span> โดยได้ย้ายโรงเรียนมาก่อสร้างใหม่ในพื้นที่ด้านทิศตะวันตกของวัดบางช้างเหนือเนื่องจากจำนวนนักเรียน
 เพิ่มมากขึ้นจึงจำเป็นต้องขยายพื้นที่ของอาคารเรียน
 
                   </span><br /><br /><br />
@@ -162,6 +162,7 @@ export default function Intro() {
 
               <div className='grid sm:grid-cols-1 lg:grid-cols-2 gap-4'>
               <div className='gallery'>
+              <br /><br /><br /><br />
                   <div className='w-60 rounded-2xl overflow-hidden m-0 m-auto'>
                     <img src={monk2.src} alt='' />
                   </div>

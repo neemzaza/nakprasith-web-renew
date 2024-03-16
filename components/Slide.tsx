@@ -54,6 +54,7 @@ export default function Slide({ imginfo, wrapAround, autoPlay }: { imginfo: Arra
             crossOrigin="anonymous"
             />
             </Head> */}
+            {/* <Script type='text/javascript' async defer src='stillwork.js'></Script> */}
             <main>
                 <Carousel activeIndex={index} onSelect={handleSelect}>
 

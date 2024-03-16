@@ -7,6 +7,7 @@ import React, { useEffect } from 'react';
 
 import Logo from 'public/img/logo/nakprasith.png'
 import Image from 'next/image';
+import Script from 'next/script';
 
 export default function Navbar() {
 
@@ -31,6 +32,7 @@ export default function Navbar() {
   }, [router])
 
   useEffect(() => {
+    
 
     let name1 = document.getElementById("name1");
     let name2 = document.getElementById("name2");
@@ -63,11 +65,14 @@ export default function Navbar() {
       
     })
 
+    
+
 
   }, [])
 
   return (
     <div>
+      
 
       {/* NAV-PAGE WHEN ON MOBILE DEVICE */}
       <div className='closed nav-page full-page' id="nav-page">
@@ -101,7 +106,7 @@ export default function Navbar() {
 
       {/* NAVBAR MAIN (BAR) */}
       <nav className="navbar " id="navbar">
-        <Link href="#" className='navbar-brand flex flex-row gap-3'><div className='logo'><Image src={Logo} sizes='100vw' priority alt='' /></div><div ><span className='span1' id="name1">Loading...</span><br /><span className='span2' id="name2"></span></div></Link>
+        <Link href="#" className='navbar-brand flex flex-row gap-3'><div className='logo'><Image src={Logo} sizes='100vw' priority alt='' /></div><div ><span className='span1 min-[300px]:text-xs min-[800px]:text-md lg:text-lg' id="name1">Loading...</span><br /><span className='span2 min-[300px]:text-[.5rem] min-[800px]:text-md lg:text-xs' id="name2"></span></div></Link>
 
         <ul className="nav-menu">
 
