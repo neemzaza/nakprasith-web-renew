@@ -64,7 +64,12 @@ export default function Manager() {
                 
                 <br />
 
-                <Slide imginfo={managerJson} wrapAround={false} autoPlay={false} />
+                <div className='grid sm:grid-cols-1 md:grid-cols-2 3xl:grid-cols-4 gap-4'>
+                  <img className='rounded-2xl' src={one.src}></img>
+                  <img className='rounded-2xl' src={two.src}></img>
+                  <img className='rounded-2xl' src={three.src}></img>
+                  <img className='rounded-2xl' src={four.src}></img>
+                </div>
 
               </div>
             </section>

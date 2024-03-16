@@ -56,3 +56,69 @@ h1 {
     left: 0;
   }
 }
+
+.paragraph {
+  padding-left: 4rem;
+}
+
+.gallery {
+  & .img {
+    height: 24rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: grid;
+    position: relative;
+    top: 0;
+    transition: .3s;
+
+    & .caption {
+      color: #000;
+      width: 100%;
+      padding: 1rem;
+      position: absolute;
+      bottom: -10rem;
+      z-index: 0;
+      transition: .2s;
+    }
+
+    & .caption:nth-child(odd) {
+      background: var(--accent-bg-color);
+    }
+    & .caption:nth-child(even) {
+      background: var(--main-bg-color);
+    }
+
+    /* & .caption::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      
+      opacity: .85;
+      backdrop-filter: blur(7px);
+      z-index: -1;
+    } */
+
+    &:hover .caption {
+      bottom: 0rem;
+    }
+
+    &:hover {
+      top: -10px;
+    }
+  }
+  & img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  
+}
+
+section.info {
+  background: #fff;
+  border-radius: 2rem;
+}

@@ -48,14 +48,35 @@ export default function Info() {
 
         <div className="container-page activity">
 
-        <section className="">
+        <section className="info grid gap-4 md:grid-cols-1 lg:grid-cols-2 overflow-hidden">
               <div className="container-page">
                 <h1></h1>
                 
                 <br />
 
-                <Slide imginfo={infoJson} wrapAround={false} autoPlay={false} />
+                <p className='text-lg'>
+                <span className='text-xl'>
+                  <b>โรงเรียนนาคประสิทธิ์&nbsp;</b>
+                </span>
+                มูลนิธิวัดบางข้างเหนือ ตั้งอยู่เลขที่ 97/1 หมู่ 3 ตำบลคลองใหม่อำเภอสามพราน จังหวัดนครปฐม 
+                <br /><br />
+                <ul className='list-disc pl-4'>
+                  <li >เปิดสอนระดับชั้นเตรียมอนุบาล ถึงระดับชั้นมัธยมศึกษาปีที่ 6</li>
+                  <li> ได้แยกระดับประกาศนียบัตรวิชาชีพเป็น วิทยาลัยเทคโนโลยีนาคประสิทธิ์บริหารธุรกิจ</li>
+                  <li>พระพิพัฒน์ศึกษากร เจ้าอาวาสวัดบางช้างเหนือเป็นประธานมูลนิธิ</li>
+                  <li>นายสันติ เย็นสบาย เป็นผู้ทำการแทนผู้รับใบอนุญาต มูลนิธิวัดบางช้างเหนือ</li>
+                  <li>นางอารีย์ เฉลิมศักดิ์ เป็นผู้จัดการ</li>
+                  <li>ดร.เครือวัลย์เผ่าผึ้ง เป็นผู้อำนวยการ</li>
+                </ul>
+                <br />
+                <p>ดำเนินการบริหารจัดการโดยใช้โรงเรียนเป็นฐานในรูปแบบของคณะกรรมการ ซึ่งมีตัวแทนจากชุมชน ผู้ปกครอง ผู้ทรงคุณวุฒิ และผู้แทนครูร่วมเป็นกรรมการโรงเรียน </p>
+                    <br />
+              </p>
 
+              </div>
+
+              <div>
+                <img className='w-[40rem] rounded-3xl m-0 m-auto relative top-[50%] translate-y-[-50%]' src={two.src} alt="" />
               </div>
             </section>
         </div>
