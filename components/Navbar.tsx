@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import NavigationJSON from './data/navigation.json'
-import InfoJSON from './data/info.json'
+import NavigationJSON from '../public/data/navigation.json'
+import InfoJSON from '../public/data/info.json'
 
 import { useRouter } from 'next/router'
 import React, { useEffect } from 'react';

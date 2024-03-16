@@ -16,7 +16,7 @@ import currentEvent from 'components/data/current-event.json'
 import Logo from 'public/img/logo/nakprasith.png'
 import { useEffect } from 'react'
 
-import InfoJSON from '../../components/data/info.json'
+import InfoJSON from '../../public/data/info.json'
 
 const inter = Inter({ subsets: ['latin'] })
 

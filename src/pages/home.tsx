@@ -11,7 +11,7 @@ import Header from 'components/header/Header'
 import coverSrc from 'public/img/cover/cover1.jpg'
 import HeadNP from 'public/img/person/headnp.jpg'
 
-import currentEvent from 'components/data/current-event.json'
+import currentEvent from '../../public/data/current-event.json'
 
 import Logo from 'public/img/logo/nakprasith.png'
 
