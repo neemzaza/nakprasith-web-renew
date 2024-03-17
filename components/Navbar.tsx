@@ -8,6 +8,8 @@ import React, { useEffect } from 'react';
 import Logo from 'public/img/logo/nakprasith.png'
 import Image from 'next/image';
 import Script from 'next/script';
+import axios from 'axios';
+
 
 export default function Navbar() {
 
@@ -32,18 +34,28 @@ export default function Navbar() {
   }, [router])
 
   useEffect(() => {
+
+    const fetchData = async () => {
+      const res = await axios.get('/api/getinfo')  
+
+      return res;
+    }
     
 
     let name1 = document.getElementById("name1");
     let name2 = document.getElementById("name2");
 
-    let upperText1 = InfoJSON['school-eng-name-1'].toUpperCase();
-    //@ts-ignore
-    name1.innerText = upperText1;
+    fetchData().then((res) => {
+      let upperText1 = res.data['school-eng-name-1'].toUpperCase();
+      //@ts-ignore
+      name1.innerText = upperText1;
+  
+      let upperText2 = res.data['school-eng-name-2'].toUpperCase();
+       //@ts-ignore
+      name2.innerText = upperText2;
+    })
 
-    let upperText2 = InfoJSON['school-eng-name-2'].toUpperCase();
-     //@ts-ignore
-    name2.innerText = upperText2;
+   
 
     let navbar = document.getElementById("navbar")
 
